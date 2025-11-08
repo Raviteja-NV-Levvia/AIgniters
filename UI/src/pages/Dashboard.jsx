@@ -31,7 +31,7 @@ export default function Dashboard() {
 
   const navItems = [
     { name: "Dashboard", icon: "🏠", path: "/dashboard" },
-    { name: "Defect", icon: "📊", path: "/defects" },
+    { name: "Defect Assistant", icon: "📊", path: "/defects" },
     { name: "Settings", icon: "⚙️", path: "/settings" },
   ];
 
