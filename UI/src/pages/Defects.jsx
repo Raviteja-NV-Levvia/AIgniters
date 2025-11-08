@@ -13,8 +13,8 @@ const Defects = () => {
   const navigate = useNavigate();
 
   const [defects, setDefects] = useState([
-    { id: 1, title: "UI button misaligned" },
-    { id: 2, title: "Crash on login" },
+    { id: 1, title: "AI model misclassified input data" },
+    { id: 2, title: "API timeout under heavy load" },
   ]);
 
   const handleCreateDefect = () => {
@@ -60,10 +60,18 @@ const Defects = () => {
             </div>
           </div>
         </div>
-        <header className="mb-8">
-           <p className="text-gray-600 mt-2">
-            Track and manage defects efficiently. Create new defects or view existing ones.
+        <header className="mb-10 bg-white p-6 rounded-2xl shadow-sm">
+          
+          <p className="text-gray-600 text-lg mb-4">
+            Leverage intelligent insights to streamline the detection, classification, and resolution of software defects.
+            This page provides an overview of the defect lifecycle, helping teams focus on quality, speed, and precision.
           </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-1">
+            <li><strong>AI-based Detection:</strong> Identify potential issues early using predictive analytics.</li>
+            <li><strong>Automated Classification:</strong> Categorize defects by severity and impact.</li>
+            <li><strong>Smart Prioritization:</strong> Optimize resolution order using data-driven insights.</li>
+            <li><strong>Insight Dashboard:</strong> Visualize patterns and recurring issues for continuous improvement.</li>
+          </ul>
         </header>
         
 
@@ -71,13 +79,13 @@ const Defects = () => {
         <div className="flex flex-col sm:flex-row gap-6 mb-10">
           <button
             onClick={handleCreateDefect}
-            className="flex-1 px-8 py-6 bg-blue-600 text-white text-xl font-semibold rounded-2xl shadow-lg hover:bg-blue-700 transition"
+            className="flex-1 px-8 py-6 bg-gray-600 text-white text-xl font-semibold rounded-2xl shadow-lg hover:bg-blue-700 transition"
           >
             Create a Defect
           </button>
           <button
             onClick={handleListDefects}
-            className="flex-1 px-8 py-6 bg-green-600 text-white text-xl font-semibold rounded-2xl shadow-lg hover:bg-green-700 transition"
+            className="flex-1 px-8 py-6 bg-gray-600 text-white text-xl font-semibold rounded-2xl shadow-lg hover:bg-green-700 transition"
           >
             List of Defects
           </button>
