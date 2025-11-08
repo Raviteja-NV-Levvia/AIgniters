@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import XlsxUpload from "../components/FileUpload";
+
 
 import { useUser, UserButton } from "@clerk/clerk-react";
 // Sidebar items example
 const sidebarItems = [
   { name: "Dashboard", link: "/dashboard" },
-  { name: "Defect Management", link: "/defects" },
+  { name: "Defect Assistant", link: "/defects" },
   { name: "Settings", link: "/settings" },
 ];
 
@@ -47,7 +49,7 @@ const Defects = () => {
       <main className="flex-1 p-8 overflow-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold">Defects Management</h1>
+          <h1 className="text-3xl font-bold">Defect Management Assistant</h1>
 
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-4">
@@ -61,38 +63,87 @@ const Defects = () => {
           </div>
         </div>
         <header className="mb-10 bg-white p-6 rounded-2xl shadow-sm">
-          
-          <p className="text-gray-600 text-lg mb-4">
-            Leverage intelligent insights to streamline the detection, classification, and resolution of software defects.
-            This page provides an overview of the defect lifecycle, helping teams focus on quality, speed, and precision.
+           <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center">
+        Welcome to AIgniters Defect Management Assistant
+      </h1>
+      <p className="text-gray-600 mb-10 text-center text-lg">
+        Revolutionizing QA workflows with AI-powered intelligence and automation
+      </p>
+
+      {/* Feature / Functionality Cards */}
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Intelligent Defect Logging */}
+        <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="text-2xl font-semibold mb-2 text-blue-600">
+            📝 Intelligent Defect Logging
+          </h2>
+          <p className="text-gray-600">
+            Auto-generate defect descriptions and steps to reproduce from test results, 
+            voice instructions, or raw inputs. Automatically attach logs, screenshots, and videos.
           </p>
-          <ul className="list-disc list-inside text-gray-600 space-y-1">
-            <li><strong>AI-based Detection:</strong> Identify potential issues early using predictive analytics.</li>
-            <li><strong>Automated Classification:</strong> Categorize defects by severity and impact.</li>
-            <li><strong>Smart Prioritization:</strong> Optimize resolution order using data-driven insights.</li>
-            <li><strong>Insight Dashboard:</strong> Visualize patterns and recurring issues for continuous improvement.</li>
-          </ul>
+        </div>
+
+        {/* Duplicate Defect Prevention */}
+        <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="text-2xl font-semibold mb-2 text-blue-600">
+            🔍 Duplicate Defect Prevention
+          </h2>
+          <p className="text-gray-600">
+            Semantic similarity search prevents duplicate defect entries. Alerts testers if a similar defect already exists.
+          </p>
+        </div>
+
+        {/* Severity & Priority Automation */}
+        <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="text-2xl font-semibold mb-2 text-blue-600">
+            🎯 Automated Severity & Priority
+          </h2>
+          <p className="text-gray-600">
+            AI analyzes historical triage data and recommends appropriate severity and priority levels for each defect.
+          </p>
+        </div>
+
+        {/* Predictive Analytics */}
+        <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="text-2xl font-semibold mb-2 text-blue-600">
+            📊 Predictive Analytics
+          </h2>
+          <p className="text-gray-600">
+            Predict defect-prone modules, expected defect density, and risk hotspots for upcoming sprints/releases based on historical patterns.
+          </p>
+        </div>
+      </div>
+      {/* Footer / Description */}
+      <p className="text-sm text-gray-500 mt-6">
+        Once uploaded, AI will extract and analyze defect data from your Excel sheet.
+      </p>
+      <div className="mt-12 w-full">
+            <XlsxUpload />
+          </div>
         </header>
         
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-10">
-          <button
+        <div className="flex flex-col sm:flex-row gap-6 mb-10 ">
+          {/* <div className="mt-12 w-full">
+            <XlsxUpload />
+          </div> */}
+          {/* <button
             onClick={handleCreateDefect}
             className="flex-1 px-8 py-6 bg-gray-600 text-white text-xl font-semibold rounded-2xl shadow-lg hover:bg-blue-700 transition"
           >
-            Create a Defect
+            Upload CSV File
           </button>
           <button
             onClick={handleListDefects}
             className="flex-1 px-8 py-6 bg-gray-600 text-white text-xl font-semibold rounded-2xl shadow-lg hover:bg-green-700 transition"
           >
             List of Defects
-          </button>
+          </button> */}
         </div>
 
         {/* Optional defect list */}
-        <div className="w-full max-w-3xl">
+        {/* <div className="w-full max-w-3xl">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Defect List</h2>
           {defects.length === 0 ? (
             <p className="text-gray-500">No defects recorded yet.</p>
@@ -108,7 +159,7 @@ const Defects = () => {
               ))}
             </ul>
           )}
-        </div>
+        </div> */}
       </main>
     </div>
   );
