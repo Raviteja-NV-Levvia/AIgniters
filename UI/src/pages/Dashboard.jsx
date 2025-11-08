@@ -100,9 +100,9 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
             { title: "Total defects", value: "128", change: "+12%" },
-            { title: "AI Findings", value: "34", change: "+8%" },
-            { title: "Pending Reports", value: "9", change: "-3%" },
-            { title: "Resolved Issues", value: "87", change: "+15%" },
+            { title: "New Defects", value: "34", change: "+8%" },
+            { title: "AI Predicted Severity", value: "9 High", change: "-3%" },
+            { title: "Duplicate Detected", value: "3", change: "+3%" },
           ].map((card, i) => (
             <motion.div
               key={i}

@@ -134,7 +134,7 @@ export default function Dashboards() {
                   onClick={handleStart}
                   className="bg-gray-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow-md transition"
                 >
-                  🚀 Welcome, Let's Go to the Dashboard
+                  🚀 Welcome, Let's go to the Dashboard
                 </motion.button>}
 
                 <button

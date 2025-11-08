@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import Signup from "./pages/Signup"; 
 import { useEffect } from "react";
+import CreateDefectForm from "./components/CreateDefectForm";
+import DefectList from "./components/DefectList";
+
 
 function ProtectedRoute({ children }) {
   return (
@@ -63,8 +66,10 @@ function App() {
         {/* Protected Routes */}
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/defects" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
-        {/* <Route path="/insights" element={<ProtectedRoute><Insights /></ProtectedRoute>} /> */}
         <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+        
+        <Route path="/create-defect" element={<ProtectedRoute><CreateDefectForm /></ProtectedRoute>} />
+        <Route path="/defectlist" element={<ProtectedRoute><DefectList /></ProtectedRoute>} />
       </Routes>
     </Router>
   )
