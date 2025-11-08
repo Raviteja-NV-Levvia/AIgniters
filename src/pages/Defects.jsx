@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import XlsxUpload from "../components/FileUpload";
+import { motion } from "framer-motion";
 
-
+import { Link, useLocation } from "react-router-dom";
 import { useUser, UserButton } from "@clerk/clerk-react";
 // Sidebar items example
 const sidebarItems = [
-  { name: "Dashboard", link: "/dashboard" },
-  { name: "Defect Assistant", link: "/defects" },
-  { name: "Settings", link: "/settings" },
+  { name: "Dashboard", icon: "🏠", path: "/dashboard" },
+    { name: "Defect Assistant", icon: "📊", path: "/defects" },
+    { name: "Settings", icon: "⚙️", path: "/settings" }
 ];
 
 const Defects = () => {
   const navigate = useNavigate();
 
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const [defects, setDefects] = useState([
     { id: 1, title: "AI model misclassified input data" },
     { id: 2, title: "API timeout under heavy load" },
@@ -30,7 +32,46 @@ const Defects = () => {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-800 text-white flex flex-col">
+      <motion.aside
+        animate={{ width: isCollapsed ? "80px" : "240px" }}
+        transition={{ duration: 0.3 }}
+        className="bg-gray-900 flex flex-col p-5 border-r border-gray-800"
+      >
+        <div className="flex items-center justify-between mb-8">
+          {!isCollapsed && (
+            <h2 className="text-2xl font-bold text-blue-400">DefectIQ</h2>
+          )}
+          <button
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            className="text-gray-400 hover:text-white"
+            title="Toggle Sidebar"
+          >
+            {isCollapsed ? "➡️" : "⬅️"}
+          </button>
+        </div>
+
+        <nav className="flex flex-col gap-3">
+          {sidebarItems.map((item, i) => (
+            <Link
+              key={i}
+              to={item.path}
+              className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-200 ${
+                location.pathname === item.path
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-400 hover:bg-gray-800 hover:text-white"
+              }`}
+            >
+              <span className="text-lg">{item.icon}</span>
+              {!isCollapsed && <span>{item.name}</span>}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="mt-auto text-xs text-gray-500 text-center pt-6">
+          {!isCollapsed && "© 2025 DefectIQ"}
+        </div>
+      </motion.aside>
+      {/* <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="text-2xl font-bold p-6 border-b border-gray-700">DefectIQ</div>
         <nav className="flex-1 p-4 space-y-2">
           {sidebarItems.map((item) => (
@@ -43,7 +84,7 @@ const Defects = () => {
             </a>
           ))}
         </nav>
-      </aside>
+      </aside> */}
 
       {/* Main Content */}
       <main className="flex-1 p-8 overflow-auto">
