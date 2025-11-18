@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIPoweredDefectManagementAssistantAPI", "AIPoweredDefectManagementAssistantAPI\AIPoweredDefectManagementAssistantAPI.csproj", "{7364BA96-C399-485C-9BCB-6DD1019DB25F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIPoweredDefectManagementAssistant.Services", "AIPoweredDefectManagementAssistant.Services\AIPoweredDefectManagementAssistant.Services.csproj", "{D6857441-1780-483D-94AE-39E69583A72D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIPoweredDefectManagementAssistant.Datalayer", "AIPoweredDefectManagementAssistant.Datalayer\AIPoweredDefectManagementAssistant.Datalayer.csproj", "{2F2ABF35-0DFC-4C7D-B6A4-8FEC499B1ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIPoweredDefectManagementAssistant.Models", "AIPoweredDefectManagementAssistant.Models\AIPoweredDefectManagementAssistant.Models.csproj", "{0CD90D11-2991-4FEC-84BD-30360D071D5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7364BA96-C399-485C-9BCB-6DD1019DB25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7364BA96-C399-485C-9BCB-6DD1019DB25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7364BA96-C399-485C-9BCB-6DD1019DB25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7364BA96-C399-485C-9BCB-6DD1019DB25F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6857441-1780-483D-94AE-39E69583A72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6857441-1780-483D-94AE-39E69583A72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6857441-1780-483D-94AE-39E69583A72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6857441-1780-483D-94AE-39E69583A72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2ABF35-0DFC-4C7D-B6A4-8FEC499B1ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2ABF35-0DFC-4C7D-B6A4-8FEC499B1ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2ABF35-0DFC-4C7D-B6A4-8FEC499B1ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2ABF35-0DFC-4C7D-B6A4-8FEC499B1ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD90D11-2991-4FEC-84BD-30360D071D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD90D11-2991-4FEC-84BD-30360D071D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD90D11-2991-4FEC-84BD-30360D071D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD90D11-2991-4FEC-84BD-30360D071D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {103EDD07-8080-4A34-B8D1-59186A632FA3}
+	EndGlobalSection
+EndGlobal

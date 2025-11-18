@@ -1,0 +1,79 @@
+# Visual Studio / .NET / IDE ignores for a Visual Studio 2022 / .NET 8 solution
+
+## Build outputs
+[Bb]in/
+obj/
+out/
+publish/
+
+## Visual Studio workspace & user files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Rider / JetBrains
+.idea/
+*.iml
+_ReSharper*/
+
+## VS Code
+.vscode/
+
+## NuGet and package artifacts
+packages/
+*.nupkg
+.nuget/
+project.assets.json
+project.lock.json
+
+## Test results / coverage
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage.*.xml
+coverage.opencover.xml
+lcov.info
+
+## Logs
+*.log
+
+## ASP.NET / configuration / secrets
+appsettings.Development.json
+secrets.json
+.env
+.env.*.local
+
+## Local DB / EF artifacts
+*.db
+*.mdf
+*.ldf
+*.sqlite
+*.sqlite3
+
+## Tools / generated files
+*.dotsettings
+*.vsix
+Generated/
+**/Generated/
+
+## Node / npm
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+## Rider caches, metadata
+.idea/
+*.sln.iml
+
+## OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore user-specific JetBrains Rider files
+.idea/**/workspace.xml
+.idea/**/tasks.xml

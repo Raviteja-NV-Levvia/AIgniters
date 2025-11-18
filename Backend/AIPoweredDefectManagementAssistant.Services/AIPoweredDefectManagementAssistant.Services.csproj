@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AIPoweredDefectManagementAssistant.Datalayer\AIPoweredDefectManagementAssistant.Datalayer.csproj" />
+    <ProjectReference Include="..\AIPoweredDefectManagementAssistant.Models\AIPoweredDefectManagementAssistant.Models.csproj" />
+  </ItemGroup>
+
+</Project>
